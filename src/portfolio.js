@@ -301,35 +301,46 @@ const openSource = {
 
 
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  title: "Projects",
+  subtitle: "MY PROJECT EXPERIENCE",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/ExpenseTracker.png"),
+      projectName: "Budget Tracker WebApp",
+      projectDesc: "Created a React web application to manage budgets, visualize expenses, and track progress with CSS progress bars.",
       footerLink: [
         {
-          name: "Visit Website",
-          url: "http://saayahealth.com/"
+          name: "View on GitHub",
+          url: "https://github.com/Pooja-Sangle/budget-management-app"
         }
-        //  you can add extra buttons here.
       ]
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/TodoApp.png"),
+      projectName: "ToDo WebApp",
+      projectDesc: "Developed a ToDo web application using Django and MySQL to manage task lists and display user-specific details based on login.",
       footerLink: [
         {
-          name: "Visit Website",
-          url: "http://nextu.se/"
+          name: "View on GitHub",
+          url: "https://github.com/Pooja-Sangle/The-Todo-App"
+        }
+      ]
+    },
+    {
+      image: require("./assets/images/resortBooking.png"),
+      projectName: "Resort Booking App",
+      projectDesc: "Developed an Android app allowing users to book resorts by selecting desired rooms and locations, using DatePickerDialog for date selection.",
+      footerLink: [
+        {
+          name: "View on GitHub",
+          url: "https://github.com/Pooja-Sangle/Resort-Booking-App"
         }
       ]
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true
 };
+
 
 // Achievement Section
 // Include certificates, talks etc

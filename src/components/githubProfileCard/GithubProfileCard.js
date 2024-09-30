@@ -6,27 +6,7 @@ import {Fade} from "react-reveal";
 import React, { useEffect, useState } from 'react'; // Import necessary hooks
 import axios from 'axios';
 
-export default function GithubProfileCard({prof1}) {
-  const [prof, setProf] = useState({}); // Initialize state for profile
-  const isHireable = true; // This can be set based on your logic
-
-  useEffect(() => {
-    const getProfileData = async () => {
-      try {
-        const response = await axios.get("/profile.json"); // Fetch the JSON data
-        console.log("Fetched response:", response.data); // Log the fetched data
-
-        // Assuming response.data is structured correctly
-        const userData = response.data.data.user; // Access user data
-        setProf(userData); // Set the profile state
-      } catch (error) {
-        console.error("Error fetching profile data:", error);
-      }
-    };
-
-    getProfileData(); // Call the fetch function
-  }, []);
-
+export default function GithubProfileCard({prof}) {
   // Set hireable status based on the isHireable variable
   prof.hireable = isHireable ? "Yes" : "No"; 
 
@@ -39,27 +19,7 @@ export default function GithubProfileCard({prof1}) {
             <div className="blog-header">
               <p className="subTitle blog-subtitle">{contactInfo.subtitle}</p>
             </div>
-            <h2 className="bio-text">{emoji(String(prof.bio || "Bio not available"))}</h2> {/* Display the bio with emoji */}
-            {prof.location && ( // Check if location exists
-              <div className="location-div">
-                <span className="desc-prof">
-                  <svg
-                    viewBox="-0.5 -2 20 19"
-                    version="1.1"
-                    width="22"
-                    height="16"
-                    aria-hidden="true"
-                    stroke="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M6 0C2.69 0 0 2.5 0 5.5 0 10.02 6 16 6 16s6-5.98 6-10.5C12 2.5 9.31 0 6 0zm0 14.55C4.14 12.52 1 8.44 1 5.5 1 3.02 3.25 1 6 1c1.34 0 2.61.48 3.56 1.36.92.86 1.44 1.97 1.44 3.14 0 2.94-3.14 7.02-5 9.05zM8 5.5c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"
-                    ></path>
-                  </svg>
-                  {prof.location}
-                </span>
-              </div>
-            )}
+            <h2 className="bio-text">A Full Stack Developer skilled in Python, React & Django. Currently pursuing M.Sc. in Computer Science. Building web applications, exploring new technologies!</h2> {/* Display the bio with emoji */}
             <div className="opp-div">
               <span className="desc-prof">
                 Open for opportunities: {prof.hireable}
@@ -69,7 +29,7 @@ export default function GithubProfileCard({prof1}) {
           </div>
           <div className="image-content-profile">
             <img
-              src={prof.avatarUrl}
+              src={require("../../assets/images/me.png")}
               alt={prof.name || "Profile Avatar"} // Fallback for alt text
               className="profile-image"
             />
