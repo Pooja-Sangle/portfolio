@@ -456,10 +456,10 @@ const resumeSection = {
 };
 
 const contactInfo = {
-  title: emoji("Contact Me ☎️"),
-  subtitle: "Discuss a project or just want to say hi? My inbox is open for all inquiries.",
-  number: "+49-17673246375", // Your phone number based on resume
-  email_address: "psangle.2611@gmail.com" // Your email address from the resume
+  // title: emoji("Contact Me ☎️"),
+  // subtitle: "Discuss a project or just want to say hi? My inbox is open for all inquiries.",
+  // number: "+49-17673246375", // Your phone number based on resume
+  // email_address: "psangle.2611@gmail.com" // Your email address from the resume
 };
 
 

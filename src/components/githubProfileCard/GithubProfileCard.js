@@ -17,7 +17,7 @@ export default function GithubProfileCard({prof}) {
         <div className="row">
           <div className="main-content-profile">
             <div className="blog-header">
-              <p className="subTitle blog-subtitle">{contactInfo.subtitle}</p>
+              <p className="subTitle blog-subtitle">Discuss a project or just want to say hi? My inbox is open for all inquiries.</p>
             </div>
             <h2 className="bio-text">A Full Stack Developer skilled in Python, React & Django. Currently pursuing M.Sc. in Computer Science. Building web applications, exploring new technologies!</h2> {/* Display the bio with emoji */}
             <div className="opp-div">
@@ -30,7 +30,6 @@ export default function GithubProfileCard({prof}) {
           <div className="image-content-profile">
             <img
               src={require("../../assets/images/me.png")}
-              alt={prof.name || "Profile Avatar"} // Fallback for alt text
               className="profile-image"
             />
           </div>
