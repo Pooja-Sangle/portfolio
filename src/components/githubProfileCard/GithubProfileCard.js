@@ -6,9 +6,8 @@ import {Fade} from "react-reveal";
 import React, { useEffect, useState } from 'react'; // Import necessary hooks
 import axios from 'axios';
 
-export default function GithubProfileCard({prof}) {
+export default function GithubProfileCard() {
   // Set hireable status based on the isHireable variable
-  prof.hireable = isHireable ? "Yes" : "No"; 
 
   return (
     <Fade bottom duration={1000} distance="20px">
@@ -22,7 +21,7 @@ export default function GithubProfileCard({prof}) {
             <h2 className="bio-text">A Full Stack Developer skilled in Python, React & Django. Currently pursuing M.Sc. in Computer Science. Building web applications, exploring new technologies!</h2> {/* Display the bio with emoji */}
             <div className="opp-div">
               <span className="desc-prof">
-                Open for opportunities: {prof.hireable}
+                Open for opportunities: Yes
               </span>
             </div>
             <SocialMedia />
