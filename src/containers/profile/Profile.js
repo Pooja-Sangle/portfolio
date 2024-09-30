@@ -2,6 +2,7 @@ import React, {useState, useEffect, lazy, Suspense} from "react";
 import {openSource} from "../../portfolio";
 import Contact from "../contact/Contact";
 import Loading from "../loading/Loading";
+import axios from 'axios'; 
 
 const renderLoader = () => <Loading />;
 const GithubProfileCard = lazy(() =>
@@ -15,25 +16,32 @@ export default function Profile() {
 
   useEffect(() => {
     if (openSource.showGithubProfile === "true") {
-      const getProfileData = () => {
-        fetch("/profile.json")
-          .then(result => {
-            if (result.ok) {
-              return result.json();
-            }
-          })
-          .then(response => {
-            setProfileFunction(response.data.user);
-          })
-          .catch(function (error) {
-            console.error(
-              `${error} (because of this error GitHub contact section could not be displayed. Contact section has reverted to default)`
-            );
-            setProfileFunction("Error");
-            openSource.showGithubProfile = "false";
-          });
+      const getProfileData = async () => {
+        try {
+          const response = await axios.get("/profile.json");
+          
+          console.log("Fetched data:", response.data); // Log the response to see its structure
+  
+          // Safely access pinnedItems with optional chaining
+          const pinnedItems = response.data.data.user.pinnedItems.edges; // Access edges directly
+  
+          // Check if pinnedItems is defined and is an array
+          if (Array.isArray(pinnedItems)) {
+            setProfileFunction(pinnedItems); // Set the fetched data to state
+          } else {
+            console.warn("Pinned items are not available or undefined.");
+            setProfileFunction("No pinned items available");
+          }
+        } catch (error) {
+          console.error(
+            `${error} (because of this error GitHub contact section could not be displayed. Contact section has reverted to default)`
+          );
+          setProfileFunction("Error"); // Handle the error gracefully
+          openSource.showGithubProfile = "false"; // Update the visibility flag
+        }
       };
-      getProfileData();
+  
+      getProfileData(); // Call the function to fetch data
     }
   }, []);
   if (

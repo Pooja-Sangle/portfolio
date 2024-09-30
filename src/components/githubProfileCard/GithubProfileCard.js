@@ -1,16 +1,35 @@
-import React from "react";
 import "./GithubProfileCard.scss";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import {contactInfo, isHireable} from "../../portfolio";
 import emoji from "react-easy-emoji";
 import {Fade} from "react-reveal";
+import React, { useEffect, useState } from 'react'; // Import necessary hooks
+import axios from 'axios';
 
-export default function GithubProfileCard({prof}) {
-  if (isHireable) {
-    prof.hireable = "Yes";
-  } else {
-    prof.hireable = "No";
-  }
+export default function GithubProfileCard({prof1}) {
+  const [prof, setProf] = useState({}); // Initialize state for profile
+  const isHireable = true; // This can be set based on your logic
+
+  useEffect(() => {
+    const getProfileData = async () => {
+      try {
+        const response = await axios.get("/profile.json"); // Fetch the JSON data
+        console.log("Fetched response:", response.data); // Log the fetched data
+
+        // Assuming response.data is structured correctly
+        const userData = response.data.data.user; // Access user data
+        setProf(userData); // Set the profile state
+      } catch (error) {
+        console.error("Error fetching profile data:", error);
+      }
+    };
+
+    getProfileData(); // Call the fetch function
+  }, []);
+
+  // Set hireable status based on the isHireable variable
+  prof.hireable = isHireable ? "Yes" : "No"; 
+
   return (
     <Fade bottom duration={1000} distance="20px">
       <div className="main" id="contact">
@@ -20,8 +39,8 @@ export default function GithubProfileCard({prof}) {
             <div className="blog-header">
               <p className="subTitle blog-subtitle">{contactInfo.subtitle}</p>
             </div>
-            <h2 className="bio-text">"{emoji(String(prof.bio))}"</h2>
-            {prof.location !== null && (
+            <h2 className="bio-text">{emoji(String(prof.bio || "Bio not available"))}</h2> {/* Display the bio with emoji */}
+            {prof.location && ( // Check if location exists
               <div className="location-div">
                 <span className="desc-prof">
                   <svg
@@ -51,7 +70,7 @@ export default function GithubProfileCard({prof}) {
           <div className="image-content-profile">
             <img
               src={prof.avatarUrl}
-              alt={prof.name}
+              alt={prof.name || "Profile Avatar"} // Fallback for alt text
               className="profile-image"
             />
           </div>

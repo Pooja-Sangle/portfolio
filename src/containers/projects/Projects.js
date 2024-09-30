@@ -4,6 +4,9 @@ import Button from "../../components/button/Button";
 import {openSource, socialMediaLinks} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 import Loading from "../../containers/loading/Loading";
+import axios from 'axios'; // Make sure to import axios
+
+
 export default function Projects() {
   const GithubRepoCard = lazy(() =>
     import("../../components/githubRepoCard/GithubRepoCard")
@@ -15,25 +18,23 @@ export default function Projects() {
   const {isDark} = useContext(StyleContext);
 
   useEffect(() => {
-    const getRepoData = () => {
-      fetch("/profile.json")
-        .then(result => {
-          if (result.ok) {
-            return result.json();
-          }
-          throw result;
-        })
-        .then(response => {
-          setrepoFunction(response.data.user.pinnedItems.edges);
-        })
-        .catch(function (error) {
-          console.error(
-            `${error} (because of this error, nothing is shown in place of Projects section. Also check if Projects section has been configured)`
-          );
-          setrepoFunction("Error");
-        });
+    console.log("debug");
+    console.log(openSource.showGithubProfile);
+  
+    const getRepoData = async () => {
+      try {
+        const response = await axios.get("/profile.json"); // Fetch the JSON data using axios
+        console.log("Data fetched with axios:", response.data.data.user.pinnedItems.edges); // Log the fetched data
+        setrepoFunction(response.data.data.user.pinnedItems.edges); // Set the fetched data to state
+      } catch (error) {
+        console.error(
+          `${error} (because of this error, nothing is shown in place of Projects section. Also check if Projects section has been configured)`
+        );
+        setrepoFunction("Error"); // Handle the error gracefully
+      }
     };
-    getRepoData();
+  
+    getRepoData(); // Call the function to fetch data
   }, []);
 
   function setrepoFunction(array) {
