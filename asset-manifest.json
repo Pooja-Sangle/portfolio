@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.235b9186.css",
-    "main.js": "/portfolio/static/js/main.715b634a.js",
+    "main.css": "/portfolio/static/css/main.95849823.css",
+    "main.js": "/portfolio/static/js/main.a18c706d.js",
     "static/css/64.bba8fa55.chunk.css": "/portfolio/static/css/64.bba8fa55.chunk.css",
     "static/js/64.a4971b11.chunk.js": "/portfolio/static/js/64.a4971b11.chunk.js",
     "static/css/769.ff246b8c.chunk.css": "/portfolio/static/css/769.ff246b8c.chunk.css",
-    "static/js/769.0a3ac317.chunk.js": "/portfolio/static/js/769.0a3ac317.chunk.js",
+    "static/js/769.f8d6c234.chunk.js": "/portfolio/static/js/769.f8d6c234.chunk.js",
     "static/media/sardarPatelLogo.png": "/portfolio/static/media/sardarPatelLogo.08c49c4d7a38b256a980.png",
     "static/media/me.png": "/portfolio/static/media/me.a293190a920b7c3265c3.png",
     "static/media/Montserrat-Regular.ttf": "/portfolio/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
@@ -21,7 +21,6 @@
     "static/media/fraunhoferIEELogo.png": "/portfolio/static/media/fraunhoferIEELogo.3dfc45e975a88b33d52b.png",
     "static/media/versorLogo.png": "/portfolio/static/media/versorLogo.0b6e9266c00b0c94c6fb.png",
     "static/media/resortBooking.png": "/portfolio/static/media/resortBooking.674a975238e4889ed075.png",
-    "static/media/contactMailDark.svg": "/portfolio/static/media/contactMailDark.1db650d351729a0f17b4e3104e6a7b7a.svg",
     "static/media/developerActivity.svg": "/portfolio/static/media/developerActivity.2c0445cae86f4243433a2f5a22b2c031.svg",
     "static/media/ExpenseTracker.png": "/portfolio/static/media/ExpenseTracker.2d6063ec10bdeb693f33.png",
     "static/media/dataStructuresLogo.png": "/portfolio/static/media/dataStructuresLogo.0eeaef5642e54f929303.png",
@@ -29,15 +28,15 @@
     "static/media/skill.svg": "/portfolio/static/media/skill.35a147662ab0a1d15e579690446e0258.svg",
     "index.html": "/portfolio/index.html",
     "static/media/talksCardBack.svg": "/portfolio/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
-    "main.235b9186.css.map": "/portfolio/static/css/main.235b9186.css.map",
-    "main.715b634a.js.map": "/portfolio/static/js/main.715b634a.js.map",
+    "main.95849823.css.map": "/portfolio/static/css/main.95849823.css.map",
+    "main.a18c706d.js.map": "/portfolio/static/js/main.a18c706d.js.map",
     "64.bba8fa55.chunk.css.map": "/portfolio/static/css/64.bba8fa55.chunk.css.map",
     "64.a4971b11.chunk.js.map": "/portfolio/static/js/64.a4971b11.chunk.js.map",
     "769.ff246b8c.chunk.css.map": "/portfolio/static/css/769.ff246b8c.chunk.css.map",
-    "769.0a3ac317.chunk.js.map": "/portfolio/static/js/769.0a3ac317.chunk.js.map"
+    "769.f8d6c234.chunk.js.map": "/portfolio/static/js/769.f8d6c234.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.235b9186.css",
-    "static/js/main.715b634a.js"
+    "static/css/main.95849823.css",
+    "static/js/main.a18c706d.js"
   ]
 }
