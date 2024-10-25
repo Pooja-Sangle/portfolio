@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.95849823.css",
-    "main.js": "/portfolio/static/js/main.2ead8cc3.js",
+    "main.js": "/portfolio/static/js/main.953cc758.js",
     "static/css/64.bba8fa55.chunk.css": "/portfolio/static/css/64.bba8fa55.chunk.css",
     "static/js/64.a4971b11.chunk.js": "/portfolio/static/js/64.a4971b11.chunk.js",
     "static/css/769.ff246b8c.chunk.css": "/portfolio/static/css/769.ff246b8c.chunk.css",
@@ -9,7 +9,7 @@
     "static/media/sardarPatelLogo.png": "/portfolio/static/media/sardarPatelLogo.08c49c4d7a38b256a980.png",
     "static/media/me.png": "/portfolio/static/media/me.a293190a920b7c3265c3.png",
     "static/media/Montserrat-Regular.ttf": "/portfolio/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
-    "static/media/resume.pdf": "/portfolio/static/media/resume.e4dcb64ce4a2f3b5580d.pdf",
+    "static/media/resume.pdf": "/portfolio/static/media/resume.2381219eb45f3c378da7.pdf",
     "static/media/machineLearningLogo.png": "/portfolio/static/media/machineLearningLogo.de66425576ea91a80b7d.png",
     "static/media/thakurVidyaMandirLogo.png": "/portfolio/static/media/thakurVidyaMandirLogo.43f923de1af2cd420f6c.png",
     "static/media/Agustina.woff": "/portfolio/static/media/Agustina.eb0c59dda4cc308cba96.woff",
@@ -29,7 +29,7 @@
     "index.html": "/portfolio/index.html",
     "static/media/talksCardBack.svg": "/portfolio/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
     "main.95849823.css.map": "/portfolio/static/css/main.95849823.css.map",
-    "main.2ead8cc3.js.map": "/portfolio/static/js/main.2ead8cc3.js.map",
+    "main.953cc758.js.map": "/portfolio/static/js/main.953cc758.js.map",
     "64.bba8fa55.chunk.css.map": "/portfolio/static/css/64.bba8fa55.chunk.css.map",
     "64.a4971b11.chunk.js.map": "/portfolio/static/js/64.a4971b11.chunk.js.map",
     "769.ff246b8c.chunk.css.map": "/portfolio/static/css/769.ff246b8c.chunk.css.map",
@@ -37,6 +37,6 @@
   },
   "entrypoints": [
     "static/css/main.95849823.css",
-    "static/js/main.2ead8cc3.js"
+    "static/js/main.953cc758.js"
   ]
 }
